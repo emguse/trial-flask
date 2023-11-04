@@ -84,8 +84,8 @@ def load_logged_in_user():
             get_db()
             .execute(
                 "SELECT * FROM user WHERE id = ?",
-                (user_id),
-            )
+                (user_id,)
+                )
             .fetchone()
         )
 
